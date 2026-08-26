@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the page work well on phones and computers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Club Events - Computer Science Club</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Small amount of custom styling -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "club-green": "#16a34a"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+
+            <div class="flex items-center justify-between">
+
+                <!-- Club name -->
+                <div>
+                    <h1 class="text-xl font-bold text-gray-900">
+                        Computer Science Club
+                    </h1>
+
+                    <p class="text-sm text-gray-500">
+                        Laurentian University
+                    </p>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="flex gap-6 text-sm">
+
+                    <a href="index.html"
+                       class="text-gray-600 hover:text-club-green">
+                        Home
+                    </a>
+
+                    <a href="events.html"
+                       class="text-club-green font-medium">
+                        Events
+                    </a>
+
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main content -->
+    <main class="max-w-7xl mx-auto px-6 py-10">
+
+        <!-- Page introduction -->
+        <section class="mb-8">
+
+            <h2 class="text-3xl font-bold text-gray-900">
+                Club Events
+            </h2>
+
+            <p class="mt-2 text-gray-600">
+                Check out upcoming activities and events organized by the Computer Science Club.
+            </p>
+
+        </section>
+
+
+        <!-- Event cards -->
+        <section class="grid gap-6 md:grid-cols-3">
+
+            <!-- Event 1 -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+
+                <!-- Icon -->
+                <i data-lucide="code-2" class="w-8 h-8 text-club-green mb-4"></i>
+
+                <h3 class="text-xl font-semibold text-gray-900">
+                    Coding Workshop
+                </h3>
+
+                <p class="text-sm text-gray-500 mt-2">
+                    September 15, 2026
+                </p>
+
+                <p class="text-gray-600 mt-4">
+                    Learn basic programming concepts and work on a small coding activity.
+                </p>
+
+                <!-- Button -->
+                <button onclick="showMessage('Coding Workshop')"
+                        class="mt-5 text-sm font-medium text-club-green hover:underline">
+                    Learn More
+                </button>
+
+            </div>
+
+
+            <!-- Event 2 -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+
+                <i data-lucide="gamepad-2" class="w-8 h-8 text-club-green mb-4"></i>
+
+                <h3 class="text-xl font-semibold text-gray-900">
+                    Game Night
+                </h3>
+
+                <p class="text-sm text-gray-500 mt-2">
+                    September 25, 2026
+                </p>
+
+                <p class="text-gray-600 mt-4">
+                    Join other students for a relaxed evening of games and social activities.
+                </p>
+
+                <button onclick="showMessage('Game Night')"
+                        class="mt-5 text-sm font-medium text-club-green hover:underline">
+                    Learn More
+                </button>
+
+            </div>
+
+
+            <!-- Event 3 -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+
+                <i data-lucide="users" class="w-8 h-8 text-club-green mb-4"></i>
+
+                <h3 class="text-xl font-semibold text-gray-900">
+                    Club Meeting
+                </h3>
+
+                <p class="text-sm text-gray-500 mt-2">
+                    October 2, 2026
+                </p>
+
+                <p class="text-gray-600 mt-4">
+                    Meet club members, discuss upcoming activities, and share ideas.
+                </p>
+
+                <button onclick="showMessage('Club Meeting')"
+                        class="mt-5 text-sm font-medium text-club-green hover:underline">
+                    Learn More
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Simple message area -->
+        <div id="message"
+             class="mt-8 text-center text-gray-600">
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 mt-10">
+        <div class="max-w-7xl mx-auto px-6 py-6 text-center text-sm text-gray-500">
+            Computer Science Club - Laurentian University
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        // Shows a simple message when an event button is clicked
+        function showMessage(eventName) {
+
+            document.getElementById("message").textContent =
+                eventName + " details will be available soon.";
+
+        }
+
+        // Loads the Lucide icons
+        lucide.createIcons();
+
+    </script>
+
+</body>
+</html>
+
